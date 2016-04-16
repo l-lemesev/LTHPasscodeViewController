@@ -127,6 +127,9 @@
  @brief The font for the passcode digits.
  */
 @property (nonatomic, strong) UIFont    *passcodeFont;
+
+
+@property (nonatomic, strong) UIFont    *navigationBarFont;
 /**
  @brief The background color for the top label.
  */

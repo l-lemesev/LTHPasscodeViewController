@@ -1031,6 +1031,13 @@ options:NSNumericSearch] != NSOrderedAscending)
         @{ NSForegroundColorAttributeName : self.navigationTitleColor };
     }
     
+    NSMutableDictionary *attr = [navController.navigationBar.titleTextAttributes mutableCopy];
+    
+    if (self.navigationBarFont) {
+        [attr setObject: self.navigationBarFont forKey: NSFontAttributeName];
+        navController.navigationBar.titleTextAttributes = attr;
+    }
+    
     [viewController presentViewController:navController
                                  animated:YES
                                completion:nil];
